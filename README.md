@@ -1,7 +1,7 @@
 # RegadorAutomatico
 Regador automático, usando sensor de umidade e sensor de luz. 
 ## Projeto compatível com o código
-![image](https://user-images.githubusercontent.com/68482938/232348264-3cbe8431-dca9-4ff2-aa68-23b7fd340951.png)
+![image](https://user-images.githubusercontent.com/68482938/232349903-8473309d-9576-417e-aff0-d41974551d37.png)
 
 Para verificar o funcionamento ou fazer testes: https://www.tinkercad.com/things/bSr9aG6dRt0
 ## Obeservações importantes
