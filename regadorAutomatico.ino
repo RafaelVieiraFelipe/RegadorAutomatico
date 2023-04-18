@@ -36,35 +36,22 @@ void loop()
     Serial.print("Tensao: ");
     Serial.println(tensao);
   
-  if(luz < luzIdeal){
-    ligarLed();
-  }
-  else{
-    desligarLed();
-  }
+  // Operação ternaria para verificar a luminosidade e ativar ou desativar o led
+  (luz < luzIdeal) ? ativarLed(true) : ativarLed(false);
   
-  if(leitura_sensor > umidadeIdeal){
-    ligarAgua();
-  }
-  else{
-    desligarAgua();
-  }
+  // Operação ternaria para verificar a umidade e ativar ou desativar o motor
+  (leitura_sensor > umidadeIdeal) ? ativarAgua(true) : ativarAgua(false);
+  
   delay(500);
 }
 
 // Ligar/desligar bomba de agua
-void ligarAgua() {
-  digitalWrite(motor, HIGH);
+void ativarAgua(bool ativacaoMotor) {
+  ativacaoMotor ? digitalWrite(motor, HIGH) : digitalWrite(motor, LOW);
+  
 }
 
-void desligarAgua() {
-  digitalWrite(motor, LOW);
-}
 // Acender/apagar led
-void ligarLed(){ 
-  digitalWrite(led, HIGH);
-}
-
-void desligarLed(){
-  digitalWrite(led, LOW);
+void ativarLed(bool ativacaoLed){ 
+  ativacaoLed ? digitalWrite(led, HIGH) : digitalWrite(led, LOW);
 }
