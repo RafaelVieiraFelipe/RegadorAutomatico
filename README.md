@@ -8,5 +8,5 @@ Para verificar o funcionamento ou fazer testes: https://www.tinkercad.com/things
 Ao invés do motor CC, o projeto verdadeiro utiliza uma mini bomba d'água submersiva de 3V, por isso das pilhas colocadas em série.
 
 E o projeto real também possui um sensor de umidade capacitivo ao invés do resistivo, o funcionamento é o mesmo, mas a lógica é invertida, o que ocasionar um resultado aparentemente errado, porém para o projeto real está correto, caso esteja usando um sensor resistivo, basta trocar o "(leitura_sensor > umidadeIdeal) ? ativarAgua(true) : ativarAgua(false);" por "(leitura_sensor < umidadeIdeal) ? ativarAgua(true) : ativarAgua(false);".
-## resultado
+## Resultado
 O Led deve acender caso o sensor LDR dectecte falta de luz, e o motor deve ser atividade caso o sensor de umidade detecte que o solo não esteja de acordo com o ideal para determinada planta.
